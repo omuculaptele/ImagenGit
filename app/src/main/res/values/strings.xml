@@ -3,5 +3,15 @@
     <string name="buttonPlay">Play</string>
     <string name="buttonPause">Pause</string>
     <string name="buttonStop">Stop</string>
+    <string name="buttonCambiar">Remix</string>
+    <string name="cancion1">Nombre 1</string>
+    <string name="cancion2">Nombre 2</string>
+    <string name="cancion3">Nombre 3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="grabando">Recording</string>
+    <string name="error">ERROR!</string>
+    <string name="reproduciendo">Reproduciendo</string>
+    <string name="parando">Parando...</string>
 
 </resources>
