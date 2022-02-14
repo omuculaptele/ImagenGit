@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,7 +23,7 @@ public class Menu extends AppCompatActivity {
         btnRecorder = findViewById(R.id.buttonRegistar);
         camaraIntent = new Intent(this, Camara.class);
         videoIntent = new Intent(this,Video.class);
-        musicIntent = new Intent(this, MainActivity.class);
+        musicIntent = new Intent(this, Musica.class);
         recorderIntent = new Intent(this, Recorder.class);
 
 

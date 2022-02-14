@@ -13,5 +13,7 @@
     <string name="error">ERROR!</string>
     <string name="reproduciendo">Reproduciendo</string>
     <string name="parando">Parando...</string>
+    <string name="buttonAnterior">Anterior</string>
+    <string name="ButtonSiguiente">Siguiente</string>
 
 </resources>

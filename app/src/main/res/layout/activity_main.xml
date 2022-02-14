@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Musica">
 
     <ImageView
         android:id="@+id/simpleImageView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="297dp"
-        android:src="@drawable/fotico"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,46 +21,66 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="44dp"
         android:text="@string/buttonPlay"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonAnterior"
         app:layout_constraintEnd_toStartOf="@+id/buttonPause"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simpleImageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="516dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="44dp"
         android:text="@string/buttonPause"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSiguiente"
         app:layout_constraintEnd_toStartOf="@+id/buttonStop"
         app:layout_constraintStart_toEndOf="@+id/buttonPlay"
-        app:layout_constraintTop_toBottomOf="@+id/simpleImageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="17dp"
+        android:layout_marginTop="517dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="167dp"
         android:text="@string/buttonStop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonPause"
-        app:layout_constraintTop_toBottomOf="@+id/simpleImageView" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/buttonCambiar"
+        android:id="@+id/buttonAnterior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="162dp"
-        android:text="@string/buttonCambiar"
-        app:layout_constraintBottom_toTopOf="@+id/buttonPause"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="75dp"
+        android:text="@string/buttonAnterior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSiguiente"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/simpleImageView" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonPlay" />
+
+    <Button
+        android:id="@+id/buttonSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="75dp"
+        android:text="@string/ButtonSiguiente"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonAnterior"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

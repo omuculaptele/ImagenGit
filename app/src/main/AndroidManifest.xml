@@ -23,7 +23,7 @@
             android:name=".Camara"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Musica"
             android:exported="false" />
         <activity
             android:name=".Menu"

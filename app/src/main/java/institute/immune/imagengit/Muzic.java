@@ -4,7 +4,11 @@ public class Muzic {
     private int cancion, imagen;
     private String nombre;
 
-    //public Muzic( int a, int b){ }
+    public Muzic( int a, int b){
+        this.cancion = a;
+        this.imagen = b;
+    }
+
 
     public int getCancion() {
         return cancion;
