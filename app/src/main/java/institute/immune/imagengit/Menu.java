@@ -26,7 +26,6 @@ public class Menu extends AppCompatActivity {
         musicIntent = new Intent(this, Musica.class);
         recorderIntent = new Intent(this, Recorder.class);
 
-
         btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

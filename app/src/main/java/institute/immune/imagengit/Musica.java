@@ -14,13 +14,11 @@ import java.util.ArrayList;
 
 public class Musica extends AppCompatActivity {
 
-    private static Integer x = 0;
+    private static Integer count = 0;
     private Button buttonPlay, buttonPause, buttonStop, buttonAnterior, buttonSiguiente;
     private MediaPlayer music;
     private ImageView iv;
     private ArrayList<Muzic> lista = new ArrayList<Muzic>();
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,43 +36,29 @@ public class Musica extends AppCompatActivity {
         lista.add(new Muzic(R.raw.sad_violin, R.drawable.sad_violin));
         lista.add(new Muzic(R.raw.sitcom_laugh, R.drawable.sitcom_laugh));
 
-        music = MediaPlayer.create(this, lista.get(x).getCancion());
-        iv.setImageResource(lista.get(x).getImagen());
+        music = MediaPlayer.create(this, lista.get(count).getCancion());
+        iv.setImageResource(lista.get(count).getImagen());
 
-        /*
         buttonAnterior.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                for(x = 0;x < lista.size();)
-                {
-                    System.out.println("Nueva shnit: "+x);
-                    x+=1;
+                if(count == 0){ count = lista.size()-1;}
+                    else{
+                    count = (--count % lista.size());
+                    count = Math.abs(count);
+                }
+                setPicMus();
                 }
 
-
-                music = MediaPlayer.create(Musica.this, lista.get(x).getCancion());
-                iv.setImageResource(lista.get(x).getImagen());
-            }
-
         });
-*/
+
         buttonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (x<2) {
-                    System.out.println("MEnor: "+x);
-                    x+=1;
-                }
-
-                else{
-                    System.out.println("Zero: "+x);
-                    x = 0;
-                }
-                music = MediaPlayer.create(Musica.this, lista.get(x).getCancion());
-                iv.setImageResource(lista.get(x).getImagen());
+                count = ++count % lista.size();
+                setPicMus();
             }
-
         });
 
         buttonPlay.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +67,7 @@ public class Musica extends AppCompatActivity {
                 Toast play = Toast.makeText(getApplicationContext(), "Play", Toast.LENGTH_LONG);
                 play.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 play.show();
-                System.out.println("El Play: "+x);
+                System.out.println("El Play: "+ count);
                 music.start();
             }
         });
@@ -95,7 +79,6 @@ public class Musica extends AppCompatActivity {
                 pause.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 pause.show();
                 music.pause();
-
             }
         });
 
@@ -105,12 +88,13 @@ public class Musica extends AppCompatActivity {
                 Toast stop = Toast.makeText(getApplicationContext(), "Stop", Toast.LENGTH_LONG);
                 stop.setGravity(Gravity.BOTTOM | Gravity.CENTER_HORIZONTAL, 0, 0);
                 stop.show();
-                music.stop();
-
+                music.reset();
             }
         });
-
-
+    }
+    public void setPicMus(){
+        music = MediaPlayer.create(Musica.this, lista.get(count).getCancion());
+        iv.setImageResource(lista.get(count).getImagen());
     }
 
 }

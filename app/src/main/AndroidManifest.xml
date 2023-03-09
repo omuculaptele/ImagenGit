@@ -15,18 +15,23 @@
         android:theme="@style/Theme.ImagenGit">
         <activity
             android:name=".Recorder"
+            android:label="Recorder"
             android:exported="false" />
         <activity
             android:name=".Video"
+            android:label="CamaraV"
             android:exported="false" />
         <activity
             android:name=".Camara"
+            android:label="CamaraV"
             android:exported="false" />
         <activity
             android:name=".Musica"
+            android:label="Muzik"
             android:exported="false" />
         <activity
             android:name=".Menu"
+            android:label="Menu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
